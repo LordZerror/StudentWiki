@@ -1,0 +1,2 @@
+# StudentWiki
+Student Administration Website
