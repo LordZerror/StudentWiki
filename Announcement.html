@@ -5,109 +5,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <style>
-    body {
-      margin: 0;
-    }
-
-    .header {
-      font-family: "Audiowide", sans-serif;
-      text-shadow: 3px 3px 3px #ababab;
-      background-color: #F1F1F1;
-      text-align: left;
-      padding: 20px;
-      border-bottom: 6px solid red;
-      background-color: lightgrey;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 25%;
-      background-color: #f1f1f1;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-      line-height: 5.0;
-    }
-
-    li a {
-      font-size: 15px;
-      font-family: "Trirong", serif;
-      display: block;
-      color: #000;
-      padding: 2px 16px;
-      text-decoration: none;
-    }
-
-    li a.active {
-
-      background-color: #04AA6D;
-      color: white;
-    }
-
-    li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
-    }
-
-    .searchBox {
-      position: absolute;
-      top: 0%;
-      left: 90%;
-      transform: translate(-50%, 50%);
-      background: #2f3640;
-      height: 40px;
-      border-radius: 40px;
-      padding: 10px;
-
-    }
-
-    .searchBox:hover>.searchInput {
-      width: 240px;
-      padding: 0 6px;
-    }
-
-    .searchBox:hover>.searchButton {
-      background: white;
-      color: #2f3640;
-    }
-
-    .searchButton {
-      color: white;
-      float: right;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: #2f3640;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: 0.4s;
-    }
-
-    .searchInput {
-      border: none;
-      background: none;
-      outline: none;
-      float: left;
-      padding: 0;
-      color: white;
-      font-size: 16px;
-      transition: 0.4s;
-      line-height: 40px;
-      width: 0px;
-
-    }
-
-    @media screen and (max-width: 620px) {
-      .searchBox:hover>.searchInput {
-        width: 150px;
-        padding: 0 6px;
-      }
-    }
-  </style>
+ <link rel='stylesheet' href='Announcement.css'>
 </head>
 
 <body>
@@ -126,10 +24,10 @@
   </div>
 
   <ul>
-    <li><a href="/index.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
+    <li><a href="/dashboard.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
     <li><a href="/TimeTable.html"><i class="material-icons">event</i>Time Table</a></li>
     <li><a href="/Assignments.html"><i class="material-icons">business_center</i>Assignments</a></li>
-    <li><a class="active" href="/Announcements.html"><i class="material-icons">campaign</i>Announcements</a></li>
+    <li><a class="active" href="/Announcement.html"><i class="material-icons">campaign</i>Announcements</a></li>
   </ul>
 
   <div style="margin-left:25%;padding:1px 16px;height:1000px;">
