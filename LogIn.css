@@ -21,11 +21,13 @@ button {
   cursor: pointer;
   width: 100%;
   border-radius: 50px ;
+  border: 2px solid #000;
 }
 
 button:hover {
-  opacity: 0.8;
-  border: none;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
 }
 
 /* Extra styles for the cancel button */

@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #000;
+  background: #eef0ef;
   transition: all 0.5s;
   z-index: 997;
   padding: 0px 0;
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 #header .logo a {
-  color: #fff;
+  color: #000;
   font-size: larger;
 }
 #header .logo img {
@@ -128,8 +128,8 @@ h1, h2, h3, h4, h5, h6 {
 .get-started-btn {
   font-family: "Raleway", sans-serif;
   margin-left: 22px;
-  border: 2px solid #FFf;
-  color: #fff;
+  border: 2px solid #000;
+  color: #000;
   border-radius: 50px;
   padding: 8px 25px;
   white-space: nowrap;
@@ -137,12 +137,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   display: inline-block;
   font-weight: 500;
-  width: 110px;
   text-align: center;
 }
 .get-started-btn:hover {
-  background: #FFf;
-  color: #000;
+  background: #000;
+  color: #fff;
   border: 2px solid #fff;
   cursor: pointer;
 }
