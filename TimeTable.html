@@ -1,51 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' />
+    <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+    <script src='lib/main.js'></script>
+    <link href='tt.css' rel="stylesheet">
+    <link href='lib/main.css' rel='stylesheet' />
+    <script>
 
-<head>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel='stylesheet' href='TimeTable.css'>
-</head>
+      document.addEventListener('DOMContentLoaded', function() {
 
-<body>
+        document.querySelector('.nbTT').addEventListener('mouseover', function(){
+        document.getElementById('timetable').style.display='block';
+        });
 
-  <div class="header">
-    <h1>StudentWiki</h1>
-    <div class="searchBox">
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
 
-      <input class="searchInput" type="text" name="" placeholder="Search">
-      <button class="searchButton" href="#">
-        <i class="material-icons">
-          search
-        </i>
-      </button>
+          initialView: 'timeGridWeek',
+
+          allDaySlot: false,
+
+          nowIndicator: true,
+
+          slotMinTime: '08:00:00',
+
+          slotMaxTime: '19:00:00',
+
+          expandRows: true,
+
+          titleFormat: { // will produce something like "September 2018"
+            month: 'long',
+            year: 'numeric',
+          },
+
+          firstDay: 1,
+
+          themeSystem: 'bootstrap',
+
+          eventSources:[
+              {
+                events: [
+                    {
+                    title  : 'EM-III',
+                    startTime  : '10:15:00',
+                    endTime    : '12:15:00',
+                    daysOfWeek: ['1']
+                    },
+                    {
+                      title  : 'Lunch',
+                      startTime  : '12:15:00',
+                      endTime    : '13:00:00',
+                      color: '#cfcfcf',
+                      textColor: 'black'
+                    },
+                    {
+                    title  : 'OOP-Java',
+                    startTime  : '13:00:00',
+                    endTime    : '14:00:00',
+                    daysOfWeek: ['1'],
+                    
+                    },
+                    {
+                      title: 'Data Structures',
+                      startTime: '14:00:00',
+                      endTime: '15:00:00',
+                      daysOfWeek:['1']
+                    }
+                    
+                ]
+           
+              }
+          ]
+
+        });
+        calendar.render();
+        calendar.setOption('aspectRatio', 2);
+      });
+
+    </script>
+  </head>
+  <body>
+    <header id='header' class='fixed-top'>
+      <h1 class='logo'>StudentWiki</h1>
+    </header>
+    <div id='timetable'></div>
+    <div id='navbar'>
+      <ul>
+        <li><a href='/dashboard.html'>Dashboard</a></li>
+        <li class='nbTT'><a href='/TimeTable.html'>Time Table</a></li>
+        <li><a href='/Assignments.html'>Assignments</a></li>
+        <li><a href='/Announcements.html'>Announcements</a></li>
+        <li><a href='/Library.html'>Library</a></li>
+      </ul>
     </div>
-  </div>
+    <div id='calendar'></div>
 
-  <ul>
-    <li><a href="dashboard.html"><i class="material-icons">dashboard</i>Dashboard</a></li>
-    <li><a class="active" href="TimeTable.html"><i class="material-icons">event</i>Time Table</a></li>
-    <li><a href="Assignments.html"><i class="material-icons">business_center</i>Assignments</a></li>
-    <li><a href="Announcements.html"><i class="material-icons">campaign</i>Announcements</a></li>
-  </ul>
-
-  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-    <h2>Fixed Full-height Side Nav</h2>
-    <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
-    <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width.
-      If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
-    <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long
-      (for example if it has over 50 links inside of it).</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-    <p>Some text..</p>
-  </div>
-
-</body>
-
+  </body>
 </html>
