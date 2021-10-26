@@ -5,15 +5,13 @@
     <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' />
     <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
     <script src='lib/main.js'></script>
-    <link href='TimeTable.css' rel="stylesheet">
     <link href='lib/main.css' rel='stylesheet' />
+    <script src='common.js' defer></script>
+    <link href='common.css' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <script>
 
       document.addEventListener('DOMContentLoaded', function() {
-
-        document.querySelector('.nbTT').addEventListener('mouseover', function(){
-        document.getElementById('timetable').style.display='block';
-        });
 
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -46,19 +44,21 @@
                     title  : 'EM-III',
                     startTime  : '10:15:00',
                     endTime    : '12:15:00',
+                    color: '#24305e',
                     daysOfWeek: ['1']
                     },
                     {
                       title  : 'Lunch',
                       startTime  : '12:15:00',
                       endTime    : '13:00:00',
-                      color: '#cfcfcf',
+                      color: '#e4e4e4',
                       textColor: 'black'
                     },
                     {
                     title  : 'OOP-Java',
                     startTime  : '13:00:00',
                     endTime    : '14:00:00',
+                    color: '#24305e',
                     daysOfWeek: ['1'],
                     
                     },
@@ -66,9 +66,143 @@
                       title: 'Data Structures',
                       startTime: '14:00:00',
                       endTime: '15:00:00',
+                      color: '#24305e',
                       daysOfWeek:['1']
+                    },
+                    {
+                      title: 'Computer Graphics',
+                      startTime: '15:00:00',
+                      endTime: '16:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['1']
+                    },
+                    {
+                      title: 'MPR',
+                      startTime: '16:00:00',
+                      endTime: '17:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['1']
+                    },
+                    {
+                      title: 'Lab',
+                      startTime: '10:15:00',
+                      endTime: '12:15:00',
+                      color: '#24305e',
+                      daysOfWeek:['2']
+                    },
+                    {
+                      title: 'DSGT',
+                      startTime: '13:00:00',
+                      endTime: '14:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['2']
+                    },
+                    {
+                      title: 'Data Structures',
+                      startTime: '14:00:00',
+                      endTime: '15:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['2']
+                    },
+                    {
+                      title: 'EM-III',
+                      startTime: '15:00:00',
+                      endTime: '16:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['2']
+                    },
+                    {
+                      title: 'EM-III (T)',
+                      startTime: '16:00:00',
+                      endTime: '17:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['2']
+                    },
+                    {
+                      title: 'DSGT',
+                      startTime: '10:15:00',
+                      endTime: '11:15:00',
+                      color: '#24305e',
+                      daysOfWeek:['3']
+                    },
+                    {
+                      title: 'Computer Graphics',
+                      startTime: '11:15:00',
+                      endTime: '12:15:00',
+                      color: '#24305e',
+                      daysOfWeek:['3']
+                    },
+                    {
+                      title: 'Data Structures',
+                      startTime: '13:00:00',
+                      endTime: '14:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['3']
+                    },
+                    {
+                      title: 'DLCA',
+                      startTime: '14:00:00',
+                      endTime: '15:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['3']
+                    },
+                    {
+                      title: 'Lab',
+                      startTime: '15:00:00',
+                      endTime: '17:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['3']
+                    },
+                    {
+                      title: 'DLCA',
+                      startTime: '10:15:00',
+                      endTime: '11:15:00',
+                      color: '#24305e',
+                      daysOfWeek:['4']
+                    },
+                    {
+                      title: 'DSGT',
+                      startTime: '11:15:00',
+                      endTime: '12:15:00',
+                      color: '#24305e',
+                      daysOfWeek:['4']
+                    },
+                    {
+                      title: 'Lab',
+                      startTime: '13:00:00',
+                      endTime: '15:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['4']
+                    },
+                    {
+                      title: 'OOP-Java',
+                      startTime: '15:00:00',
+                      endTime: '16:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['4']
+                    },
+                    {
+                      title: 'Lab',
+                      startTime: '10:15:00',
+                      endTime: '12:15:00',
+                      color: '#24305e',
+                      daysOfWeek:['5']
+                    },
+                    {
+                      title: 'Computer Graphics',
+                      startTime: '13:00:00',
+                      endTime: '14:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['5']
+                    },
+                    {
+                      title: 'DLCA',
+                      startTime: '14:00:00',
+                      endTime: '15:00:00',
+                      color: '#24305e',
+                      daysOfWeek:['5']
                     }
-                    
+  
                 ]
            
               }
@@ -85,14 +219,14 @@
     <header id='header' class='fixed-top'>
       <h1 class='logo'>StudentWiki</h1>
     </header>
-    <div id='timetable'></div>
+
     <div id='navbar'>
       <ul>
-        <li><a href='/dashboard.html'>Dashboard</a></li>
-        <li class='nbTT'><a href='/TimeTable.html'>Time Table</a></li>
-        <li><a href='/Assignments.html'>Assignments</a></li>
-        <li><a href='/Announcements.html'>Announcements</a></li>
-        <li><a href='/Library.html'>Library</a></li>
+        <li class='LI' onmouseover="visib(0)" onmouseout="invisib(0)"><img src='icons/aspect-ratio.svg'><a href='/dashboard.html'>Dashboard</a></li>
+        <li class='LI'><img src='icons/calendar2-week-fill.svg'><a href='/TimeTable.html'>Time Table</a><div class='nb' style="display: block;"></div></li>
+        <li class='LI' onmouseover="visib(2)" onmouseout="invisib(2)"><img src='icons/bookmarks.svg'><a href='/Assignments.html'>Assignments</a></li>
+        <li class='LI' onmouseover="visib(3)" onmouseout="invisib(3)"><img src='icons/megaphone.svg'><a href='/Announcements.html'>Announcements</a></li>
+        <li class='LI' onmouseover="visib(4)" onmouseout="invisib(4)"><img src='icons/book.svg'><a href='/Library.html'>Library</a></li>
       </ul>
     </div>
     <div id='calendar'></div>
