@@ -1,0 +1,63 @@
+h2{
+    margin: 100px 0 0 350px;
+    position: absolute;
+    font-family: 'Raleway';
+}
+
+#assignment{
+    width: 75%;
+    height: auto;
+    margin: 160px 10px 0 350px;
+    position: absolute;
+}
+
+.records{
+    width: auto;
+    height: 75px;
+    background-color: #24305e;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.code{
+    width: 55px;
+    height: 55px;
+    border-radius: 55px;
+    background-color: #d1e8e2;
+    position: absolute;
+    z-index: 1;
+    margin: 10px 0 0 35px;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 3px;
+    font-weight: 500;
+}
+
+.title{
+    color: #f1f1f1;
+    font-weight: 500;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+    margin: 5px 0 5px 110px;
+}
+
+.subj{
+    color: #f1f1f1;
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    z-index: 2;
+    margin: 40px 0 5px 110px;
+}
+
+.dl{
+    color: #f1f1f1;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 2;
+    margin-top: 25px;
+    margin-left: 950px;
+}

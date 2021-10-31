@@ -8,6 +8,4 @@ function visib(num){
 function invisib(n){
     var Div=document.getElementsByClassName('LI')[n];
     Div.removeChild(Div.lastChild);
-}
-
-    
+}    
