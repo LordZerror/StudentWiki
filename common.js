@@ -1,4 +1,6 @@
 
+//The user interface when the user hovers on the elements of the navbar
+
 function visib(num){
     var myDiv=document.createElement('div');
     myDiv.className='nb';
