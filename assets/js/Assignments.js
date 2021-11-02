@@ -9,7 +9,7 @@
         record2:{
             title: 'Experiment 03',
             code: 'J',
-            deadline: 'November 01'
+            deadline: 'November 05'
         },
         record3:{
             title: 'Assignment 02',
@@ -34,10 +34,18 @@
     for(let r in Assignments){
         const today=new Date();
         let dl=today.toLocaleString('default', {month: 'long', day: '2-digit'}); 
-
-        if(Assignments[r].deadline.localeCompare(dl)){createAssignment(r);} //The assignment will disappear after the deadline is passed
-        else{delete Assignments[r];}
+        let hour=today.toLocaleString('default', {hour: 'numeric'});
+        createAssignment(r);
+        if(!Assignments[r].deadline.localeCompare(dl) && hour=='11 PM'){
+            delete Assignments[r];
+            deleteAssignment(index(r)-1);
+        } //The assignment will disappear after the deadline is passed
     }
+
+    function index(r){
+        let c=r.charAt(r.length-1);
+        return c;
+    }//return the index of assignment to be deleted
 
     function createAssignment(r){
 
@@ -75,5 +83,10 @@
         deadline.appendChild(dlText);
         record.appendChild(deadline);
     }
+
+    function deleteAssignment(r){
+        var myRecord=document.getElementById('assignment');
+        myRecord.removeChild(myRecord.children[r]);
+    }//deletes the assignment after the deadline has passed
 
 })();
