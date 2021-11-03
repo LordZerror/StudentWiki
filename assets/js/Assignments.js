@@ -1,10 +1,17 @@
 (function(){
 
+    /* Subject Codes:   CG - Computer Graphics
+                        DS - Data Structures
+                        DL - Digital Logic & Computer Architecture
+                        DG - Discrete Structures & Graph Theory
+                        J  - Java
+                        EM - Engineering Mathematics  */
+
     var Assignments={
         record1:{
             title: 'Experiment 01',
             code: 'CG',
-            deadline: 'November 02'
+            deadline: 'November 03'
         },
         record2:{
             title: 'Experiment 03',
@@ -31,15 +38,22 @@
         }
     }
 
+    const today=new Date();
+    let dl=today.toLocaleString('default', {month: 'long', day: '2-digit'}); 
+
     for(let r in Assignments){
-        const today=new Date();
-        let dl=today.toLocaleString('default', {month: 'long', day: '2-digit'}); 
         let hour=today.toLocaleString('default', {hour: 'numeric'});
-        createAssignment(r);
-        if(!Assignments[r].deadline.localeCompare(dl) && hour=='11 PM'){
-            delete Assignments[r];
-            deleteAssignment(index(r)-1);
+        if(Assignments[r].deadline.localeCompare(dl)=='0' || Assignments[r].deadline.localeCompare(dl)=='-1'){
+            if(Assignments[r].deadline.localeCompare(dl)=='0' && hour.localeCompare('11 PM')){
+                createAssignment(r);
+            }
+            else{
+                delete Assignments[r];
+            }
         } //The assignment will disappear after the deadline is passed
+        else{
+            createAssignment(r);
+        }
     }
 
     function index(r){
@@ -78,8 +92,12 @@
 
         //Creating container for deadline
         var deadline=document.createElement('p');
-        deadline.className='dl';        
-        var dlText=document.createTextNode('Due '+Assignments[r].deadline);
+        deadline.className='dl';  
+        var dlText;      
+        if(Assignments[r].deadline.localeCompare(dl)=='0'){
+            dlText=document.createTextNode('Due Today');
+        }
+        else{dlText=document.createTextNode('Due '+Assignments[r].deadline);}
         deadline.appendChild(dlText);
         record.appendChild(deadline);
     }
