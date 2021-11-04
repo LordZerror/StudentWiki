@@ -1,0 +1,29 @@
+h2{
+    margin: 100px 0 0 350px;
+    position: absolute;
+    font-family: 'Raleway';
+    color: #24305e;
+}
+
+h3{
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#announcements{
+    width: 75%;
+    height: 50%;
+    margin: 180px 10px 0 350px;
+    position: absolute;
+}
+
+#acadAnnouncement{
+    float: left;
+    width: 50%;
+}
+
+#nonAcadAnnouncement{
+    float: left;
+    width: 50%;
+}
