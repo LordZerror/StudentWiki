@@ -10,17 +10,17 @@ var Assignments={
     record1:{
         title: 'Experiment 01',
         code: 'CG',
-        deadline: 'November 04'
+        deadline: 'January 24 2022'
     },
     record2:{
         title: 'Experiment 03',
         code: 'J',
-        deadline: 'November 05'
+        deadline: 'November 12 2021'
     },
     record3:{
         title: 'Assignment 02',
         code: 'DS',
-        deadline: 'November 12'
+        deadline: 'December 04 2021'
     }
 };
 
@@ -40,18 +40,49 @@ function codes(subCode){
 const today=new Date();
 let dl=today.toLocaleString('default', {month: 'long', day: '2-digit'}); 
 
-for(let r in Assignments){
+Object.keys(Assignments).reverse().forEach(r => {
+
+    dateCheck(Assignments[r].deadline);
+
     let hour=today.toLocaleString('default', {hour: 'numeric'});
+    let month=today.toLocaleString('default', {month: 'short'});
+    let year=today.toLocaleString('default', {year: 'numeric'});
+    let currentMonth=dateCheck(month);
+    let dlMonth=dateCheck(Assignments[r].deadline);
+
+    if(dlMonth>currentMonth || year<Assignments[r].deadline.substring(Assignments[r].deadline.length-4)){createAssignment(r);}
+    
     if(Assignments[r].deadline.localeCompare(dl)=='0' || Assignments[r].deadline.localeCompare(dl)=='-1'){
         if(Assignments[r].deadline.localeCompare(dl)=='0' && hour.localeCompare('11 PM')){
             createAssignment(r);
         }
         else{
             delete Assignments[r];
+
         }
     } //The assignment will disappear after the deadline is passed
     else{
         createAssignment(r);
+    }
+    
+}); 
+
+function dateCheck(m){
+    month=m.substring(0, 3);
+    switch(month){
+        case 'Jan': return 1; break;
+        case 'Feb': return 2; break;
+        case 'Mar': return 3; break;
+        case 'Apr': return 4; break;
+        case 'May': return 5; break;
+        case 'Jun': return 6; break;
+        case 'Jul': return 7; break;
+        case 'Aug': return 8; break;
+        case 'Sep': return 9; break;
+        case 'Oct': return 10; break;
+        case 'Nov': return 11; break;
+        case 'Dec': return 12; break;
+        default: console.log('none');
     }
 }
 
