@@ -3,14 +3,18 @@
 <head>
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.css' rel='stylesheet' />
   <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.1/css/all.css' rel='stylesheet'>
+  <script src='lib/main.js'></script>
+  <link href='lib/main.css' rel='stylesheet' />
   <script src='common.js' defer></script>
   <link href='common.css' rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-  <script src='assets/js/Dashboard.js' defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href='assets/css/dashboard.css' rel='stylesheet'>  
 </head>
 
 <body>
   <header id='header' class='fixed-top'>
+    <a href="dashboard.html"><img src="icons/Asset 32.svg" alt="" ></a>
     <h1 class='logo'>StudentWiki</h1>
   </header>
 
@@ -22,7 +26,68 @@
       <li class='LI' onmouseover="visib(3)" onmouseout="invisib(3)"><img src='icons/megaphone.svg'><a href='/Announcements.html'>Announcements</a></li>
     </ul>
   </div>
+
   
+  <div id='Cal'>
+    <a href='/TimeTable.html'><h4>TODAY'S LECTURES</h4></a>
+    <div id='calendar'></div> <!--The whole calendar goes into this div-->
+  </div>
+  
+
+  <!-- <h2>ANNOUNCEMENTS</h2> -->
+  <div id='announcements'>
+    <h4>LATEST ANNOUNCEMENTS</h4>
+    <div id='acadAnnouncement'>
+      <!-- <h3>Academic Announcements</h3> -->
+    </div>
+
+    <div id='nonAcadAnnouncement' style='padding-bottom: 10px;'>
+      <!-- <h3>Non-Academic Announcements</h3> -->
+    </div>
+    
+  </div>
+
+  <div id='assignment'>
+    <h4 id='asn'>ASSIGNMENTS</h4>
+  </div>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 footer-contact">
+            <h3>StudentWiki</h3>
+            <p>
+              Thadomal Shahani Engineering College<br>
+              Mumbai 401107<br>
+              India <br><br>
+            </p>
+          </div>
+
+          <div class="col-lg-6 footer-links">
+            <h4>The Team</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Vaibhavi Pore</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Parth Parakh</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Kaushal Patil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Prabhmeet Singh Oberoi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </footer><!-- End Footer -->
+  
+  
+  <script src='assets/js/Announcements.js'></script>
+  <script src='assets/js/Assignments.js'></script>
+  <script src='assets/js/TimeTable.js'></script>
+  <script src='assets/js/Dashboard.js'></script>
+
 </body>
 
 </html>

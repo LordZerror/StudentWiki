@@ -1154,7 +1154,7 @@ A VERTICAL event
     position: relative;
   }
 .fc-media-screen.fc-liquid-hack .fc-timegrid-col-frame {
-  height: auto;
+  height: 10px;
   position: absolute;
   top: 0;
   right: 0;
@@ -1218,6 +1218,7 @@ A VERTICAL event
     /* z-index is set on the individual elements */
   }
 .fc-direction-ltr .fc-timegrid-col-events {
+    height: 10px;
     margin: 0 2.5% 0 2px;
   }
 .fc-direction-rtl .fc-timegrid-col-events {

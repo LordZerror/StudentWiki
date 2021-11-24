@@ -14,13 +14,18 @@ var Assignments={
     },
     record2:{
         title: 'Experiment 03',
-        code: 'J',
-        deadline: 'November 12 2021'
+        code: 'DS',
+        deadline: 'November 29 2021'
     },
     record3:{
         title: 'Assignment 02',
         code: 'DS',
         deadline: 'December 04 2021'
+    },
+    record4:{
+        title: 'Experiment 04',
+        code: 'J',
+        deadline: 'November 30 2021'
     }
 };
 
@@ -38,11 +43,10 @@ function codes(subCode){
 }
 
 const today=new Date();
-let dl=today.toLocaleString('default', {month: 'long', day: '2-digit'}); 
-
+let dl=today.toLocaleString('default', {month: 'long', day: '2-digit'});
 Object.keys(Assignments).reverse().forEach(r => {
 
-    dateCheck(Assignments[r].deadline);
+    //dateCheck(Assignments[r].deadline);
 
     let hour=today.toLocaleString('default', {hour: 'numeric'});
     let month=today.toLocaleString('default', {month: 'short'});
@@ -124,7 +128,8 @@ function createAssignment(r){
     var deadline=document.createElement('p');
     deadline.className='dl';  
     var dlText;      
-    if(Assignments[r].deadline.localeCompare(dl)=='0'){
+    var deadl=Assignments[r].deadline;
+    if(deadl.substring(0, deadl.length-5).localeCompare(dl)=='0'){
         dlText=document.createTextNode('Due Today');
     }
     else{dlText=document.createTextNode('Due '+Assignments[r].deadline);}

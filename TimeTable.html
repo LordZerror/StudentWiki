@@ -9,215 +9,11 @@
     <script src='common.js' defer></script>
     <link href='common.css' rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-    <script>
-
-      document.addEventListener('DOMContentLoaded', function() {
-
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-
-          initialView: 'timeGridWeek',
-
-          allDaySlot: false,
-
-          nowIndicator: true,
-
-          slotMinTime: '08:00:00',
-
-          slotMaxTime: '19:00:00',
-
-          expandRows: true,
-
-          titleFormat: { // will produce something like "September 2018"
-            month: 'long',
-            year: 'numeric',
-          },
-
-          firstDay: 1,
-
-          themeSystem: 'bootstrap',
-
-          eventSources:[
-              {
-                events: [
-                    {
-                    title  : 'EM-III',
-                    startTime  : '10:15:00',
-                    endTime    : '12:15:00',
-                    color: '#24305e',
-                    daysOfWeek: ['1']
-                    },
-                    {
-                      title  : 'Lunch',
-                      startTime  : '12:15:00',
-                      endTime    : '13:00:00',
-                      color: '#e4e4e4',
-                      textColor: 'black',
-                      daysOfWeek: ['1', '2', '3', '4', '5']
-                    },
-                    {
-                    title  : 'OOP-Java',
-                    startTime  : '13:00:00',
-                    endTime    : '14:00:00',
-                    color: '#24305e',
-                    daysOfWeek: ['1'],
-                    
-                    },
-                    {
-                      title: 'Data Structures',
-                      startTime: '14:00:00',
-                      endTime: '15:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['1']
-                    },
-                    {
-                      title: 'Computer Graphics',
-                      startTime: '15:00:00',
-                      endTime: '16:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['1']
-                    },
-                    {
-                      title: 'MPR',
-                      startTime: '16:00:00',
-                      endTime: '17:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['1']
-                    },
-                    {
-                      title: 'Lab',
-                      startTime: '10:15:00',
-                      endTime: '12:15:00',
-                      color: '#24305e',
-                      daysOfWeek:['2']
-                    },
-                    {
-                      title: 'DSGT',
-                      startTime: '13:00:00',
-                      endTime: '14:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['2']
-                    },
-                    {
-                      title: 'Data Structures',
-                      startTime: '14:00:00',
-                      endTime: '15:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['2']
-                    },
-                    {
-                      title: 'EM-III',
-                      startTime: '15:00:00',
-                      endTime: '16:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['2']
-                    },
-                    {
-                      title: 'EM-III (T)',
-                      startTime: '16:00:00',
-                      endTime: '17:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['2']
-                    },
-                    {
-                      title: 'DSGT',
-                      startTime: '10:15:00',
-                      endTime: '11:15:00',
-                      color: '#24305e',
-                      daysOfWeek:['3']
-                    },
-                    {
-                      title: 'Computer Graphics',
-                      startTime: '11:15:00',
-                      endTime: '12:15:00',
-                      color: '#24305e',
-                      daysOfWeek:['3']
-                    },
-                    {
-                      title: 'Data Structures',
-                      startTime: '13:00:00',
-                      endTime: '14:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['3']
-                    },
-                    {
-                      title: 'DLCA',
-                      startTime: '14:00:00',
-                      endTime: '15:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['3']
-                    },
-                    {
-                      title: 'Lab',
-                      startTime: '15:00:00',
-                      endTime: '17:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['3']
-                    },
-                    {
-                      title: 'DLCA',
-                      startTime: '10:15:00',
-                      endTime: '11:15:00',
-                      color: '#24305e',
-                      daysOfWeek:['4']
-                    },
-                    {
-                      title: 'DSGT',
-                      startTime: '11:15:00',
-                      endTime: '12:15:00',
-                      color: '#24305e',
-                      daysOfWeek:['4']
-                    },
-                    {
-                      title: 'Lab',
-                      startTime: '13:00:00',
-                      endTime: '15:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['4']
-                    },
-                    {
-                      title: 'OOP-Java',
-                      startTime: '15:00:00',
-                      endTime: '16:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['4']
-                    },
-                    {
-                      title: 'Lab',
-                      startTime: '10:15:00',
-                      endTime: '12:15:00',
-                      color: '#24305e',
-                      daysOfWeek:['5']
-                    },
-                    {
-                      title: 'Computer Graphics',
-                      startTime: '13:00:00',
-                      endTime: '14:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['5']
-                    },
-                    {
-                      title: 'DLCA',
-                      startTime: '14:00:00',
-                      endTime: '15:00:00',
-                      color: '#24305e',
-                      daysOfWeek:['5']
-                    }
-  
-                ]
-           
-              }
-          ]
-
-        });
-        calendar.render();
-        calendar.setOption('aspectRatio', 2);
-      });
-
-    </script>
   </head>
+
   <body>
     <header id='header' class='fixed-top'>
+      <a href="dashboard.html"><img src="icons/Asset 32.svg" alt="" ></a>
       <h1 class='logo'>StudentWiki</h1>
     </header>
 
@@ -230,6 +26,50 @@
       </ul>
     </div>
     <div id='calendar'></div> <!--The whole calendar goes into this div-->
+
+    <!-- ======= Footer ======= -->
+  <footer id="footer" style="margin-top: 50px;">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 footer-contact">
+            <h3>StudentWiki</h3>
+            <p>
+              Thadomal Shahani Engineering College<br>
+              Mumbai 401107<br>
+              India <br><br>
+            </p>
+          </div>
+
+          <div class="col-lg-6 footer-links">
+            <h4>The Team</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Vaibhavi Pore</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Parth Parakh</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Kaushal Patil</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Prabhmeet Singh Oberoi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </footer><!-- End Footer -->
+
+  <script src='assets/js/TimeTable.js'></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      var calendarEl = document.getElementById('calendar');
+      
+      var calendar = new FullCalendar.Calendar(calendarEl, cal);
+      calendar.render();
+      calendar.setOption('aspectRatio', 2);
+    });
+  </script>
 
   </body>
 </html>
