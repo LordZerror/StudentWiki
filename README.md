@@ -1,5 +1,6 @@
 # StudentWiki
 Student Administration Website
+Made using HTML, CSS, JavaScript 
 
 FullCalendar API Documentation: https://fullcalendar.io/docs
 
