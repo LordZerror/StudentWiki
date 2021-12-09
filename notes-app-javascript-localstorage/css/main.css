@@ -1,4 +1,5 @@
 html,
+
 body {
     height: 100%;
     margin: 0;
@@ -22,7 +23,7 @@ body {
 }
 
 .notes__add {
-    background: #009578;
+    background: #24305e;
     border: none;
     border-radius: 7px;
     color: #ffffff;
