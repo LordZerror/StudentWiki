@@ -192,6 +192,13 @@ var cal={
                 endTime: '15:00:00',
                 color: '#24305e',
                 daysOfWeek:['5']
+              },
+              {
+                title: 'MPR - Batch C24',
+                startTime: '10:00:00',
+                endTime: '11:00:00',
+                color: '#24305e',
+                daysOfWeek:['0']
               }
 
           ]

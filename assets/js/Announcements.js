@@ -1,43 +1,27 @@
 
 var academicAnn={
     record1:{
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        url: "https://www.w3schools.com/js/showphp.asp?filename=demo_jsonp"
+        title: "Time Table from 8th Dec 2021 till further notice for Div A & Div B",
+        url: "https://tsec.edu/wp-content/uploads/2021/12/Tentative-TT.pdf"
     },
     record2:{
-        title: "Fusce tincidunt purus id lectus vestibulum varius. Maecenas lectus massa,",
-        url: "https://www.w3schools.com/js/json_demo.txt"
+        title: "First Year Students Details (SEM-I) 2021-2022",
+        url: "https://tsec.edu/wp-content/uploads/2021/12/Attenance-Provisional.pdf"
     },
     record3:{
-        title: "Fusce tincidunt purus id lectus vestibulum varius. Maecenas lectus massa,",
-        url: "https://www.w3schools.com/js/json_demo.txt"
+        title: "FE Time Table 2021-2022",
+        url: "https://tsec.edu/wp-content/uploads/2021/12/Scan-03-Dec-2021-at-1.51-PM.pdf"
     }
 };
 
 var nonAcademicAnn={
     record1:{
-        title: "Vestibulum at libero odio. In commodo eget enim nec luctus. Curabitur",
-        url: "https://www.w3schools.com/js/tryit.asp?filename=tryjson_jsonp"
+        title: "The Happiness Club Membership Drive is OPEN!",
+        url: "https://forms.gle/NChQpMWqntJaJ8Ze7"
     },
     record2:{
-        title: "Vivamus turpis purus, varius quis est eu, ornare dapibus",
-        url: "https://www.w3schools.com/js/tryit.asp?filename=tryjson_parse"
-    },
-    record3:{
-        title: "Vestibulum at libero odio. In commodo eget enim nec luctus. Curabitur",
-        url: "https://www.w3schools.com/js/tryit.asp?filename=tryjson_jsonp"
-    },
-    record4:{
-        title: "Vestibulum at libero odio. In commodo eget enim nec luctus. Curabitur",
-        url: "https://www.w3schools.com/js/tryit.asp?filename=tryjson_jsonp"
-    },
-    record5:{
-        title: "Vestibulum at libero odio. In commodo eget enim nec luctus. Curabitur",
-        url: "https://www.w3schools.com/js/tryit.asp?filename=tryjson_jsonp"
-    },
-    record6:{
-        title: "Vestibulum at libero odio. In commodo eget enim nec luctus. Curabitur",
-        url: "https://www.w3schools.com/js/tryit.asp?filename=tryjson_jsonp"
+        title: "TIE Club brings to you another vent session: Let it go!",
+        url: "https://discord.com/invite/P8rgJ6V3ne"
     }
 };
 
