@@ -16,16 +16,6 @@ var Assignments={
         title: 'Experiment 03',
         code: 'DS',
         deadline: 'November 29 2021'
-    },
-    record3:{
-        title: 'Assignment 02',
-        code: 'DS',
-        deadline: 'December 04 2021'
-    },
-    record4:{
-        title: 'Experiment 04',
-        code: 'J',
-        deadline: 'November 30 2021'
     }
 };
 
